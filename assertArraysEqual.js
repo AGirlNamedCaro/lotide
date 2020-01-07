@@ -12,18 +12,18 @@ const eqArrays = function(array1, array2) {
   }
 };
 
-const assertArraysEqual = function(array1, array2) {
+const assertArraysEqual = function(actual, expected) {
 
-  const result = eqArrays(array1, array2);
+  const result = eqArrays(actual, expected);
 
   if (result === true) {
     //console.log(`Assertion Passed: ${array1} === ${array2}   ✅`);
-    return `Assertion Passed: ${array1} === ${array2}   ✅`;
+    return `Assertion Passed: ${actual} === ${expected}   ✅`;
 
   } else {
 
     // console.log(`Assertion Failed: ${array1} !== ${array2}   🛑`);
-    return `Assertion Failed: ${array1} !== ${array2}  🛑`;
+    return `Assertion Failed: ${actual} !== ${expected}  🛑`;
   }
 
 };
