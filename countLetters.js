@@ -23,6 +23,7 @@ const assertEqual = function(actual, expected) {
 const countLetters = function(str) {
   //  console.log(str);
   const letters = {};
+  str.split(' ');
 
   for (const item of str) {
 
