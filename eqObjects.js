@@ -36,26 +36,41 @@ const eqArrays = function(array1, array2) {
 
 const eqObjects = function(object1, object2) {
 
+const object1Keys = Object.keys(object1);
+
   //iterate through one of the objects and compare their keys.
 
-  if(Object.keys(object1).length != Object.keys(object2).length ) {
+  if(object1Keys.length != Object.keys(object2).length ) {
     return false;
   }
   else {
 
-    for(const keys of Object.keys(object1)) {
-      if(object1[keys] !== object2[keys]) {
-        return false;
+    for(const key of object1Keys) {
+
+      if(!(Array.isArray(object1[key]) && Array.isArray(object2[key]))) {
+
+        if(object1[key] !== object2[key]) {
+          return false;
+        }
+
       }
+
+      else {
+        return eqArrays(object1[key], object2[key]);
+
+        
+        
+      }
+      
+
+      }
+      
     }
     return true;
 
   }
     
   
-};
-
-
 // const ab = { a: "1", b: "2" };
 // const ba = { b: "2", a: "1" };
 // let result = eqObjects(ab, ba); // => true
