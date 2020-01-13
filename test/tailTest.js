@@ -12,9 +12,14 @@ const assert = require('chai').assert;
 describe("#tail", () => {
   it("returns the original length of the array, in this case its 3", () => {
     const words = ["Yo Yo", "Lighthouse", "Labs"];
-    tail(words);
+     tail(words);
     assertEqual(words.length,3);
     
   });
+
+  it("returns the every element of the array except for the head", () => {
+    const words = ["Yo Yo", "Lighthouse", "Labs"];
+    
+  })
 
 });

@@ -8,7 +8,8 @@ const tail = function(array) {
     arrayNew.push(array[i]);
   }
 
-  arrayNew = arrayNew.splice(1);
+  arrayNew = arrayNew.slice(1);
+  console.log("TCL: tail -> arrayNew", arrayNew)
   return arrayNew;
 
 };
