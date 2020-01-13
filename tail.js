@@ -9,6 +9,7 @@ const tail = function(array) {
   }
 
   arrayNew = arrayNew.splice(1);
+  return arrayNew;
 
 };
 
