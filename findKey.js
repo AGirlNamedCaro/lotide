@@ -29,6 +29,7 @@ const findKey = (object, callback) => {
 
   for (const items in object) {
     const callbackResult = callback(object[items]);
+    console.log(object[items]);
 
     if (callbackResult) {
       
