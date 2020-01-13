@@ -19,7 +19,7 @@ describe("#tail", () => {
 
   it("returns the every element of the array except for the head", () => {
     const words = ["Yo Yo", "Lighthouse", "Labs"];
-    
+    assertEqual(words, ['Lighthouse',"Labs"]);
   })
 
 });
